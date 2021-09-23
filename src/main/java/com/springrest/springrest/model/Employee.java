@@ -23,18 +23,24 @@ public class Employee {
 	
 	@Column(name = "email_id")
 	private String emailId;
+	
+	@Column(name = "mobile_no")
+	private long mobileNo;
 
+	
 	public Employee() {
 		
 	}
 
-	public Employee(String firstName, String lastName, String emailId) {
+	public Employee(long id, String firstName, String lastName, String emailId, long mobileNo) {
 		super();
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
+		this.mobileNo = mobileNo;
 	}
-	
+
 	public long getId() {
 		return id;
 	}
@@ -59,7 +65,12 @@ public class Employee {
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-	
+	public long getMobileNo() {
+		return mobileNo;
+	}
+	public void setMobileNo(long mobileNo) {
+		this.mobileNo = mobileNo;
+	}
 	
 
 }
