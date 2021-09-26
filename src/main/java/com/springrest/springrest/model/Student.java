@@ -8,9 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "employees")
-public class Employee {
-	
+@Table(name = "student")
+public class Student {
+	 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -26,13 +26,12 @@ public class Employee {
 	
 	@Column(name = "mobile_no")
 	private double mobileNo;
-
 	
-	public Employee() {
+	public Student () {
 		
 	}
-
-	public Employee(long id, String firstName, String lastName, String emailId, double mobileNo) {
+	
+	public Student(long id, String firstName, String lastName, String emailId, double mobileNo) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -44,33 +43,41 @@ public class Employee {
 	public long getId() {
 		return id;
 	}
+
 	public void setId(long id) {
 		this.id = id;
 	}
+
 	public String getFirstName() {
 		return firstName;
 	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
 	public String getLastName() {
 		return lastName;
 	}
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+
 	public String getEmailId() {
 		return emailId;
 	}
+
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
+
 	public double getMobileNo() {
 		return mobileNo;
 	}
+
 	public void setMobileNo(double mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 	
-
 }
